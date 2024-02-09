@@ -1868,4 +1868,13 @@ public interface RedissonClient {
      */
     String getId();
 
+    /**
+     * Returns Tair Map instance by name.
+     *
+     * @param <K> type of key
+     * @param <V> type of value
+     * @param name name of object
+     * @return Map object
+     */
+    <K, V> RTairMap<K, V> getTairMap(String name);
 }

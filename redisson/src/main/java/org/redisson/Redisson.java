@@ -1244,4 +1244,9 @@ public final class Redisson implements RedissonClient {
         return connectionManager.getServiceManager().getId();
     }
 
+    @Override
+    public <K, V> RTairMap<K, V> getTairMap(String name) {
+        return new RedissonTairMap<K, V>(commandExecutor, name, this, null, null);
+    }
+
 }
